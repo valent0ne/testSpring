@@ -1,1 +1,1 @@
-testSpring
+testSpringMysqlFreemarker

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cars</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{css/style.css}" href=""/>
+</head>
+<body>
+<h2>List of cars</h2>
+
+<img th:src="@{images/cars-movie.jpg}" src=""/>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Maker</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.id}"></td>
+            <td th:text="${car.maker}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.year}"></td>
+        </tr>
+</table>
+
+<a th:href="@{index}" href="">back to home</a>
+
+</body>
+</html>
